@@ -1,16 +1,15 @@
-from pydantic import BaseModel, Field
-from typing import List
+from pydantic import BaseModel
+from typing import List, Optional
 
 class CategoryAnalysis(BaseModel):
-    """Analysis for a specific category."""
-    score: str = Field(description="Score must be one of: Excellent, Good, Fair, Poor")
-    issues: List[str] = Field(description="List of identified issues")
-    suggestions: List[str] = Field(description="List of improvement suggestions")
-
+    """Model for individual category analysis results."""
+    score: str
+    issues: List[str]
+    suggestions: List[str]
 
 class DocumentationAnalysis(BaseModel):
-    """Complete documentation analysis structure."""
-    readability: CategoryAnalysis = Field(description="Readability analysis")
-    structure: CategoryAnalysis = Field(description="Structure analysis")
-    completeness: CategoryAnalysis = Field(description="Completeness analysis")
-    style_guidelines: CategoryAnalysis = Field(description="Style guidelines analysis") 
+    """Model for complete documentation analysis results."""
+    readability: CategoryAnalysis
+    structure: CategoryAnalysis
+    completeness: CategoryAnalysis
+    style_guidelines: CategoryAnalysis 
