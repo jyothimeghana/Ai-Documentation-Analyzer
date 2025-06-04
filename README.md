@@ -26,8 +26,8 @@ A powerful documentation analysis tool that uses LangChain and Google's Gemini A
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/jyothimeghana/Ai-Documentation-Analyzer
+cd Ai-Documentation-Analyzer
 ```
 
 2. Install dependencies:
